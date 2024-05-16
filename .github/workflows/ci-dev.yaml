@@ -1,4 +1,4 @@
-name: CI [payment-link-web-app] DEV
+name: CI [backend-app] DEV
 
 on:
   pull_request:
