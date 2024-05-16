@@ -1,0 +1,20 @@
+name: CI [payment-link-web-app] DEV
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    branches:
+      - 'main'
+
+jobs:
+  Scan:
+    name: Trivy scan
+    if: ${{ github.event.pull_request.merged == false }}
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/trivyscan.yaml@main
+    with:
+      SCAN_TYPE: repo
+    secrets: inherit
