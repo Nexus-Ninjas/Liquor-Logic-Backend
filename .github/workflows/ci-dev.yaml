@@ -9,6 +9,8 @@ on:
       - closed
     branches:
       - 'main'
+      - 'Develop'
+      - 'Release**'      
  
 jobs:
   Scan:
