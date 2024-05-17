@@ -25,6 +25,6 @@ jobs:
     if: ${{ github.event.pull_request.merged == false }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
-      RELEASE_NAME: NexusNinija LiquorLogic BE Staging release
+      RELEASE_NAME: NexusNinija LiquorLogic BE Preprod/staging release
     secrets: inherit
     needs: Check_labels
