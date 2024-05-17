@@ -25,4 +25,5 @@ jobs:
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE Preprod/staging release
+      RELEASE_VERSION: PREPROD RELEASE      
     secrets: inherit
