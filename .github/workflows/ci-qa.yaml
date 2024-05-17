@@ -26,4 +26,3 @@ jobs:
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE QA release
     secrets: inherit
-    needs: Check_labels

@@ -1,5 +1,4 @@
-
-name: CI [backend-app] DEV
+name: CI [backend-app] PREPROD
 
 on:
   pull_request:
@@ -27,4 +26,3 @@ jobs:
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE Preprod/staging release
     secrets: inherit
-    needs: Check_labels
