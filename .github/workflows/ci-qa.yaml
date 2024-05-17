@@ -21,7 +21,7 @@ jobs:
 
   Release:
     name: Create release
-    if: ${{ github.event.pull_request.merged == false }}
+    if: ${{ github.event.pull_request.merged == true }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE QA release
