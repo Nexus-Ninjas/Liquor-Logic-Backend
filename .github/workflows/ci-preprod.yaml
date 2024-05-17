@@ -1,5 +1,4 @@
-
-name: CI [backend-app] DEV
+name: CI [backend-app] PREPROD
 
 on:
   pull_request:
