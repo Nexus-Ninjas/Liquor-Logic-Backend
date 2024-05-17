@@ -12,13 +12,9 @@ on:
  
 jobs:
   Scan:
-    # name: Trivy scan
-    # if: ${{ github.event.pull_request.merged == false }}
-    # uses: Nexus-Ninjas/reusable-workflows/.github/workflows/trivyscan.yaml@main
-    # with:
-    #   SCAN_TYPE: repo
-    # secrets: inherit
     name: Snyk scan
     if: ${{ github.event.pull_request.merged == false }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
+    with:
+      CODEBASE : maven    
     secrets: inherit
