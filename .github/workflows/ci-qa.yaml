@@ -1,0 +1,29 @@
+name: CI [backend-app] QA
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    branches:
+      - 'QA'
+   
+jobs:
+  Check_labels:
+    name: Check labels
+    if: ${{ github.event.pull_request.merged == false }}
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/labels.yaml@main
+    with:
+      VALID_LABELS: release:major, release:minor, release:patch
+    secrets: inherit  
+
+  Release:
+    name: Create release
+    if: ${{ github.event.pull_request.merged == false }}
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
+    with:
+      RELEASE_NAME: NexusNinija LiquorLogic BE Develop release
+    secrets: inherit
+    needs: Check_labels
