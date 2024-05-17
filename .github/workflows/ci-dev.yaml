@@ -13,16 +13,24 @@ on:
       - 'Release**'      
  
 jobs:
-  Scan:
-    name: Snyk scan
-    if: ${{ github.event.pull_request.merged == false }}
-    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
-    with:
-      CODEBASE : maven    
-    secrets: inherit
+  # Scan:
+  #   name: Snyk scan
+  #   if: ${{ github.event.pull_request.merged == false }}
+  #   uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
+  #   with:
+  #     CODEBASE : maven    
+  #   secrets: inherit
 
-  Code_quality:
-    name: Sonar scan
+  # Code_quality:
+  #   name: Sonar scan
+  #   if: ${{ github.event.pull_request.merged == false }}
+  #   uses: Nexus-Ninjas/reusable-workflows/.github/workflows/sonar.yaml@main  
+  #   secrets: inherit
+
+  Check_labels:
+    name: Check labels
     if: ${{ github.event.pull_request.merged == false }}
-    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/sonar.yaml@main  
-    secrets: inherit
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/labels.yaml@main
+    with:
+      VALID_LABELS: release:major, release:minor, release:patch
+    secrets: inherit  
