@@ -8,8 +8,8 @@ on:
       - synchronize
       - closed
     branches:
-      - 'main'
-   
+      - "main"
+
 jobs:
   Check_labels:
     name: Check labels
@@ -17,7 +17,7 @@ jobs:
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/labels.yaml@main
     with:
       VALID_LABELS: release:major, release:minor, release:patch
-    secrets: inherit  
+    secrets: inherit
 
   Release:
     name: Create release
@@ -25,4 +25,6 @@ jobs:
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE Preprod/staging release
+      RELEASE_VERSION: PREPROD v<RELEASE_VERSION>
+      GH_ENVIRONMENT: PREPROD
     secrets: inherit
