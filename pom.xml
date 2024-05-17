@@ -57,6 +57,11 @@
                     </excludes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.2</version> <!-- Ensure the version is 2.2 or above -->
+            </plugin>
         </plugins>
     </build>
     <repositories>
