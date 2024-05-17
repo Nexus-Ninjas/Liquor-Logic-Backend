@@ -10,7 +10,7 @@ on:
     branches:
       - 'main'
       - 'Develop'
-      - 'Release**'  
+      - 'QA'  
  
 jobs:
   Scan:
