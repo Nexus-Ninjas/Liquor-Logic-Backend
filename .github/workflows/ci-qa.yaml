@@ -1,4 +1,4 @@
-name: CI [backend-app] DEV
+name: CI [backend-app] QA
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
       - synchronize
       - closed
     branches:
-      - 'Develop'
+      - 'QA'
    
 jobs:
   Check_labels:
@@ -24,6 +24,6 @@ jobs:
     if: ${{ github.event.pull_request.merged == false }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
-      RELEASE_NAME: NexusNinija LiquorLogic BE Develop release
+      RELEASE_NAME: NexusNinija LiquorLogic BE QA release
     secrets: inherit
     needs: Check_labels
