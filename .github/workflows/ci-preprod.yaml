@@ -1,5 +1,4 @@
-
-name: CI [backend-app] DEV
+name: CI [backend-app] PREPROD
 
 on:
   pull_request:
@@ -9,8 +8,8 @@ on:
       - synchronize
       - closed
     branches:
-      - 'main'
-   
+      - "main"
+
 jobs:
   Check_labels:
     name: Check labels
@@ -18,13 +17,14 @@ jobs:
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/labels.yaml@main
     with:
       VALID_LABELS: release:major, release:minor, release:patch
-    secrets: inherit  
+    secrets: inherit
 
   Release:
     name: Create release
-    if: ${{ github.event.pull_request.merged == false }}
+    if: ${{ github.event.pull_request.merged == true }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/release.yaml@main
     with:
       RELEASE_NAME: NexusNinija LiquorLogic BE Preprod/staging release
+      RELEASE_VERSION: PREPROD v<RELEASE_VERSION>
+      GH_ENVIRONMENT: PREPROD
     secrets: inherit
-    needs: Check_labels
