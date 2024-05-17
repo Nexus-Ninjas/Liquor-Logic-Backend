@@ -1,0 +1,28 @@
+name: CI [backend-app] DEV
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+    branches:
+      - 'main'
+      - 'Develop'
+      - 'Release**'  
+ 
+jobs:
+  Scan:
+    name: Snyk scan
+    if: ${{ github.event.pull_request.merged == false }}
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
+    with:
+      CODEBASE : maven    
+    secrets: inherit
+
+  Code_quality:
+    name: Sonar scan
+    if: ${{ github.event.pull_request.merged == false }}
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/sonar.yaml@main  
+    secrets: inherit
