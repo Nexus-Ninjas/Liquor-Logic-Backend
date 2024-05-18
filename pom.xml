@@ -31,6 +31,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2023.0.0-RC1</spring-cloud.version>
     </properties>
+    
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -60,10 +61,16 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.1.2</version> <!-- Ensure the version is 2.2 or above -->
+                <version>3.1.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
             </plugin>
         </plugins>
     </build>
+    
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -74,5 +81,4 @@
             </snapshots>
         </repository>
     </repositories>
-
 </project>
