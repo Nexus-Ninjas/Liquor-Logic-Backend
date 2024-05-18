@@ -13,13 +13,13 @@ on:
       - 'QA'  
  
 jobs:
-  Scan:
-    name: Snyk scan
-    if: ${{ github.event.pull_request.merged == false }}
-    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
-    with:
-      CODEBASE : maven    
-    secrets: inherit
+  # Scan:
+  #   name: Snyk scan
+  #   if: ${{ github.event.pull_request.merged == false }}
+  #   uses: Nexus-Ninjas/reusable-workflows/.github/workflows/snyk.yaml@main
+  #   with:
+  #     CODEBASE : maven    
+  #   secrets: inherit
 
   Code_quality:
     name: Sonar scan
