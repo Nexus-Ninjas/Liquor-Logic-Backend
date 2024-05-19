@@ -7,7 +7,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.5</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>com.liquorlogic</groupId>
@@ -18,11 +18,9 @@
         <module>discovery-server</module>
         <module>api-gateway</module>
         <module>user-service</module>
-        <module>order-service</module>
         <module>inventory-service</module>
-        <module>supplier-service</module>
-        <module>item-service</module>
-        <module>brand-service</module>
+        <module>pos-service</module>
+
     </modules>
 
     <properties>
@@ -31,7 +29,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-cloud.version>2023.0.0-RC1</spring-cloud.version>
     </properties>
-    
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -41,6 +38,11 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+
+
+
+
         </dependencies>
     </dependencyManagement>
 
@@ -70,7 +72,6 @@
             </plugin>
         </plugins>
     </build>
-    
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -81,4 +82,5 @@
             </snapshots>
         </repository>
     </repositories>
+
 </project>
