@@ -36,3 +36,5 @@ jobs:
       RELEASE_VERSION: QA
       GH_ENVIRONMENT: QA
     secrets: inherit
+    needs:
+      - Build    
