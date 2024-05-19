@@ -1,8 +1,0 @@
-name: CI [backend-app] prod
-
-on:
-  push:
-    tags:
-      - 'v*'
-
-jobs:

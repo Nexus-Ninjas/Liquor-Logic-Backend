@@ -1,0 +1,13 @@
+name: CI [backend-app] prod
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  Build:
+    name: Build code
+    if: ${{ github.event.pull_request.merged == true }}    
+    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/maven.yaml@main
+    secrets: inherit
