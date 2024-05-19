@@ -23,6 +23,8 @@ jobs:
     name: Build code
     if: ${{ github.event.pull_request.merged == true }}    
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/maven.yaml@main
+    with:
+      GH_ENVIRONMENT: DEVELOP    
     secrets: inherit
     
   Release:
