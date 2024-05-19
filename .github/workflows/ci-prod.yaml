@@ -1,4 +1,4 @@
-name: CI [backend-app] prod
+name: CI [backend-app] PROD
 
 on:
   push:
