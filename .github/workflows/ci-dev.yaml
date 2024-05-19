@@ -1,5 +1,5 @@
 name: CI [backend-app] DEV
-
+ 
 on:
   pull_request:
     types:
@@ -9,7 +9,7 @@ on:
       - closed
     branches:
       - "Develop"
-
+ 
 jobs:
   Check_labels:
     name: Check labels
