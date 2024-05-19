@@ -79,4 +79,13 @@
 )
   </body>
 
-sss
+## Continous Development & Delivery
+
+For Continous development this project is using GitHub reusable actions with selfhosted runner.
+Branching strategy is GitFlow
+   1) Tag from main branch - Prod 
+   2) main branch - Preprd
+   3) Develop branch - Dev
+   4) QA branch - QA 
+
+For every PR open it will run Snyk, Sonarqube and Label check Workflows and Once PR is merge it will build the code and upload artifacts to GitHub artifacts
