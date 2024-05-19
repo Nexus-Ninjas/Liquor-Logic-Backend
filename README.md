@@ -75,5 +75,6 @@
         <li>All are run on the eureka discovery client and all the series are running on the 8080 port  from API gateway </li>
     </ul>
      <h4>Diagram of functionality:</h4>
-    ![readme drawio (1)]()
+    ![readme drawio (1)](![331093087-dbd58816-5946-4476-b74f-2061a1ce3465](https://github.com/Nexus-Ninjas/Liquor-Logic-Backend/assets/98374770/814ab8f9-5745-4b17-8db2-211de07a3196)
+)
   </body>
