@@ -18,15 +18,15 @@ jobs:
     with:
       VALID_LABELS: release:major, release:minor, release:patch
     secrets: inherit
-    
+
   Build:
     name: Build code
-    if: ${{ github.event.pull_request.merged == true }}    
+    if: ${{ github.event.pull_request.merged == true }}
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/maven.yaml@main
     with:
-      GH_ENVIRONMENT: DEVELOP    
+      GH_ENVIRONMENT: DEVELOP
     secrets: inherit
-    
+
   Release:
     name: Create release
     if: ${{ github.event.pull_request.merged == true }}
@@ -37,4 +37,4 @@ jobs:
       GH_ENVIRONMENT: DEVELOP
     secrets: inherit
     needs:
-      - Build    
+      - Build
