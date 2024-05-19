@@ -21,8 +21,8 @@ jobs:
       CODEBASE : maven    
     secrets: inherit
 
-  Code_quality:
-    name: Sonar scan
-    if: ${{ github.event.pull_request.merged == false }}
-    uses: Nexus-Ninjas/reusable-workflows/.github/workflows/sonar.yaml@main  
-    secrets: inherit
+  # Code_quality:
+  #   name: Sonar scan
+  #   if: ${{ github.event.pull_request.merged == false }}
+  #   uses: Nexus-Ninjas/reusable-workflows/.github/workflows/sonar.yaml@main  
+  #   secrets: inherit
