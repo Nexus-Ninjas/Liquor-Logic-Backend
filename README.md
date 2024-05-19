@@ -79,9 +79,7 @@
 
 ## Continous Deployment & Delivery
 
-Continous Delivery 
--- 
-For Continous Delivery this project is using GitHub reusable actions with selfhosted runner.
+For Continous development this project is using GitHub reusable actions with selfhosted runner.
 Branching strategy is GitFlow
    1) Tag from main branch - Prod 
    2) main branch - Preprd
@@ -89,6 +87,8 @@ Branching strategy is GitFlow
    4) QA branch - QA 
 
 For every PR open it will run Snyk, Sonarqube and Label check Workflows and Once PR is merge it will build the code and upload artifacts to GitHub artifacts
+For every non Prod release creation is automated using Workflows and for every PR merge new GH release will create
+
 
 Continous Deployment 
 -- 
