@@ -7,7 +7,8 @@ on:
 
 jobs:
   Build:
-    name: Build code
-    if: ${{ github.event.pull_request.merged == true }}    
+    name: Build code    
     uses: Nexus-Ninjas/reusable-workflows/.github/workflows/maven.yaml@main
+    with:
+      GH_ENVIRONMENT: PROD    
     secrets: inherit
