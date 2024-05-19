@@ -12,9 +12,7 @@ import org.springframework.context.annotation.Bean;
 
 import java.util.Date;
 import java.util.List;
-/**
- * @author CypsoLabs
- */
+
 @SpringBootApplication
 @EnableDiscoveryClient
 public class UserServiceApplication {

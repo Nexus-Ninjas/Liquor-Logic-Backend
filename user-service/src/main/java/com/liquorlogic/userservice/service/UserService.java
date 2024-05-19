@@ -7,9 +7,7 @@ import com.liquorlogic.userservice.enums.Status;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-/**
- * @author CypsoLabs
- */
+
 public interface UserService {
     List<User> getAllUser();
 

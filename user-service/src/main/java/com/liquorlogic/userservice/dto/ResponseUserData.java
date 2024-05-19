@@ -9,9 +9,7 @@ import lombok.ToString;
 
 import java.util.Date;
 import java.util.UUID;
-/**
- * @author CypsoLabs
- */
+
 @Data
 @ToString
 @AllArgsConstructor

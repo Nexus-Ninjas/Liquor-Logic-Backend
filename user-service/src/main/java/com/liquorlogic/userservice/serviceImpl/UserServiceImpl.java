@@ -13,9 +13,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-/**
- * @author CypsoLabs
- */
+
 @Service
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
