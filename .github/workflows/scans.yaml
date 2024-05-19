@@ -1,4 +1,4 @@
-name: CI [backend-app] SCAN
+name: CI [frontend-app] SCAN
 
 on:
   pull_request:
