@@ -65,9 +65,7 @@
         <h2>Installation</h2>
     <h3>Prerequisites</h3>
     <ul>
-        <li>Docker</li>
-        <li>Docker Compose</li>
-        <li>Java 11 or higher</li>
+        <li>Java 17 or higher</li>
         <li>Maven</li>
     </ul>
  <h2>Functionality</h2>
@@ -79,9 +77,11 @@
 )
   </body>
 
-## Continous Development & Delivery
+## Continous Deployment & Delivery
 
-For Continous development this project is using GitHub reusable actions with selfhosted runner.
+Continous Delivery 
+-- 
+For Continous Delivery this project is using GitHub reusable actions with selfhosted runner.
 Branching strategy is GitFlow
    1) Tag from main branch - Prod 
    2) main branch - Preprd
@@ -89,3 +89,8 @@ Branching strategy is GitFlow
    4) QA branch - QA 
 
 For every PR open it will run Snyk, Sonarqube and Label check Workflows and Once PR is merge it will build the code and upload artifacts to GitHub artifacts
+
+Continous Deployment 
+-- 
+Currently this system hosted on Azure(Moved from orginally hosted AWS due to high pricing). 
+Continous Deployment workflow is not used yet
