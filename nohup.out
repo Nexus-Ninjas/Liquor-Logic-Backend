@@ -15970,3 +15970,18 @@ GET /bad-request HTTP/1.0
 2024-05-19T21:42:10.210Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: discovery-server
 2024-05-19T21:42:10.210Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition discovery-server-static applying {_genkey_0=/**} to Path
 2024-05-19T21:42:10.210Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: discovery-server-static
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition pos-service applying {_genkey_0=/api/item/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: pos-service
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition pos-service applying {_genkey_0=/api/order/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: pos-service
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition inventory-service applying {_genkey_0=/api/supplier/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: inventory-service
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition inventory-service applying {_genkey_0=/api/stock/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: inventory-service
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition user-service applying {_genkey_0=/api/user/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: user-service
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition discovery-server applying {_genkey_0=/web/**} to Path
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition discovery-server applying filter {_genkey_0=/} to SetPath
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: discovery-server
+2024-05-19T21:42:40.213Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition discovery-server-static applying {_genkey_0=/**} to Path
+2024-05-19T21:42:40.214Z DEBUG 15849 --- [api-gateway] [freshExecutor-0] o.s.c.g.r.RouteDefinitionRouteLocator    : RouteDefinition matched: discovery-server-static
