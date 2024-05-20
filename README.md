@@ -96,7 +96,10 @@ Currently this system hosted on Azure(Moved from orginally hosted AWS due to hig
 Continous Deployment workflow is developed but not used yet
 
 Build artifacts can run using following commands, Need to  run for all the built Jars. 
+
 **First need to run and discovery server and api-gateway respectivly which followed by other microservices
+
 **Need to update application.properties file inside every microservice folder's source>target directory with correct DB credentials and URL, Server IP
 e.g path: Liquor-Logic-Backend\inventory-service\src\main\resources\application.properties
+
 nohup java -jar JARNAME &
