@@ -12,11 +12,11 @@ public interface SupplierService {
 
     public Supplier saveSupplier(Supplier supplier);
 
-    Optional<Supplier> findAllByStatus(SupplierStatus status);
+    List<Supplier> findAllByStatus(SupplierStatus status);
 
     Optional<Supplier> findSupplierById(UUID supplierId);
 
-    Optional<Supplier> findByContact(String contact);
+    List<Supplier> findByContact(String contact);
 
     Optional<Supplier> findBySupplierId(UUID supplierId);
 }

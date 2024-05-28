@@ -22,13 +22,17 @@ public class Stock {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "STOCK_ID")
     private UUID stockId;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SUPPLIER_ID")
     private Supplier supplier;
+
     @Column(name = "BRANDID")
     private UUID brandId;
     @Column(name = "DISCRIPTION")
-    private String description;
+    private String discription;
+    @Column(name = "IMAGE")
+    private String image;
     @Column(name = "QTY")
     private int QTY;
     @Column(name = "CREATE_BY")
@@ -41,4 +45,5 @@ public class Stock {
     private Date updateDate;
     @Column(name = "STATUS")
     private Status status;
+
 }

@@ -30,7 +30,7 @@ public class StockController {
     private final StockService stockService;
 
     @Autowired
-    private final SupplierService supplierService;
+    private SupplierService supplierService;
 
     private static final org.apache.logging.log4j.Logger loggerLog4J = LogManager.getLogger(StockController.class);
 
@@ -53,14 +53,17 @@ public class StockController {
                 }
             }
             UUID supplierId =(UUID.fromString(credentials.get("supplierId")));
-            Optional<Supplier> supplier = supplierService.findBySupplierId(supplierId);
-            supplier.ifPresent(stock::setSupplier);
-            stock.setDescription(credentials.get("discription"));
+            Supplier supplier = supplierService.findBySupplierId(supplierId).orElseThrow(() -> new RuntimeException("Supplier not found"));
+            stock.setSupplier(supplier);
             stock.setBrandId(UUID.fromString(credentials.get("brandId")));
+            stock.setDiscription(credentials.get("description"));
+            stock.setImage(credentials.get("image"));
             stock.setQTY(Integer.parseInt(credentials.get("QTY")));
             stock.setCreateBy(credentials.get("createBy"));
             stock.setUpdateBy(credentials.get("updateBy"));
-            stock.setStatus(Status.In_Stock);
+            stock.setStatus(Status.valueOf(credentials.get("status")));
+
+
 
             Date currentDate = new Date();
             stock.setUpdateDate(currentDate);
@@ -154,6 +157,7 @@ public class StockController {
 
 
     private void validateMap(Map<String, String> assetCategoryMap, String[] requiredFileds) {
+
         for (String field : requiredFileds) {
             if (assetCategoryMap.get(field) == null || assetCategoryMap.get(field).isEmpty()) {
                 throw new IllegalArgumentException("Not found " + field);
