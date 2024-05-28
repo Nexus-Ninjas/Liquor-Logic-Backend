@@ -20,7 +20,7 @@ public class SupplierServiceImpl implements SupplierService {
 
     @Override
     public List<Supplier> getAllSuppliers() {
-        return supplierRepository.findAll();
+        return null;
     }
 
     @Override
@@ -28,18 +28,18 @@ public class SupplierServiceImpl implements SupplierService {
         return supplierRepository.save(supplier);
     }
     @Override
-    public Optional<Supplier> findAllByStatus(SupplierStatus status) {
-        return supplierRepository.findByStatus(status);
+    public List<Supplier> findAllByStatus(SupplierStatus status) {
+        return null;
     }
 
     @Override
     public Optional<Supplier> findSupplierById(UUID supplierId) {
-        return  supplierRepository.findById(supplierId);
+        return Optional.empty();
     }
 
     @Override
-    public Optional<Supplier> findByContact(String contact) {
-        return supplierRepository.findByContact(contact);
+    public List<Supplier> findByContact(String contact) {
+        return null;
     }
 
     @Override

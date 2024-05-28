@@ -37,4 +37,6 @@ public class Order {
     private Double totalAmount;
     @Column(name = "STATUS")
     private OrderStatus status;
+
+
 }
