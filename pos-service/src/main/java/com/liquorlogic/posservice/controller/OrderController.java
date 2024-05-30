@@ -1,8 +1,8 @@
 package com.liquorlogic.posservice.controller;
 
 
-import com.liquorlogic.inventoryservice.entity.Stock;
-import com.liquorlogic.inventoryservice.service.StockService;
+// import com.liquorlogic.inventoryservice.entity.Stock;
+// import com.liquorlogic.inventoryservice.service.StockService;
 import com.liquorlogic.posservice.entity.Order;
 import com.liquorlogic.posservice.enums.OrderStatus;
 import com.liquorlogic.posservice.repository.ItemRepository;
