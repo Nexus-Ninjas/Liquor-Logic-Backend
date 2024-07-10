@@ -1,5 +1,5 @@
 name: CI [frontend-app] SCAN
-
+ 
 on:
   pull_request:
     types:
